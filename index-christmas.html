@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COCO - Luxury Nail Bar in Westbury</title>
-    <meta name="description" content="Experience luxury nail care at COCO in Westbury. Expert manicures, pedicures, gel nails, and artistic nail designs.">
-    <link rel="icon" type="image/png" href="images/logo-without.png">
+    <title>COCO - Christmas Nails & Festive Nail Art in Westbury 🎄</title>
+    <meta name="description" content="Experience festive luxury nail care at COCO in Westbury. Christmas nail art, holiday manicures, and sparkling designs for the season.">
+    <link rel="icon" type="image/jpeg" href="images/front.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -21,20 +21,12 @@
         }
 
         :root {
-            --primary: #1a1a1a;
-            --gold: #d4a574;
-            --cream: #f8f6f3;
-            --white: #ffffff;
-            --text: #333333;
-            --light-gray: #f5f5f5;
-        }
-
-        /* Christmas Theme Variables (December only) */
-        body.christmas-theme {
             --primary: #165B33;
             --gold: #C41E3A;
             --cream: #FFF5F5;
+            --white: #ffffff;
             --text: #2C5F2D;
+            --light-gray: #f5f5f5;
             --christmas-red: #C41E3A;
             --christmas-green: #165B33;
             --christmas-gold: #FFD700;
@@ -58,17 +50,11 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
-
-        /* Christmas Navigation */
-        body.christmas-theme .nav-wrapper {
             background: linear-gradient(to right, rgba(22, 91, 51, 0.98), rgba(196, 30, 58, 0.98));
+            backdrop-filter: blur(10px);
             box-shadow: 0 2px 10px rgba(0,0,0,0.2), 0 0 20px rgba(255, 215, 0, 0.3);
             border-bottom: 2px solid var(--christmas-gold);
+            transition: all 0.3s ease;
         }
 
         nav {
@@ -84,23 +70,18 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.5rem;
             font-weight: 300;
-            color: var(--primary);
+            color: var(--white);
             text-decoration: none;
             letter-spacing: 8px;
             text-transform: uppercase;
-        }
-
-        /* Christmas Logo */
-        body.christmas-theme .logo {
-            color: var(--white);
             text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 2px 2px 4px rgba(0,0,0,0.3);
         }
         
-        body.christmas-theme .logo::before {
+        .logo::before {
             content: '🎄 ';
         }
         
-        body.christmas-theme .logo::after {
+        .logo::after {
             content: ' ❄️';
         }
 
@@ -112,59 +93,37 @@
         }
 
         .nav-links a {
-            color: var(--primary);
+            color: var(--white);
             text-decoration: none;
             font-size: 0.75rem;
             font-weight: 500;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--gold);
-        }
-
-        /* Christmas Nav Links */
-        body.christmas-theme .nav-links a {
-            color: var(--white);
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
-        body.christmas-theme .nav-links a:hover {
+        .nav-links a:hover {
             color: var(--christmas-gold);
             text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
         }
 
         .book-btn {
-            background: var(--primary);
-            color: var(--white) !important;
-            padding: 0.8rem 2rem;
-            border-radius: 2px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .book-btn:hover {
-            background: var(--gold);
-            color: var(--primary) !important;
-        }
-
-        /* Christmas Book Button */
-        body.christmas-theme .book-btn {
             background: var(--christmas-gold);
             color: var(--christmas-green) !important;
+            padding: 0.8rem 2rem;
             border-radius: 25px;
             font-weight: 600;
+            transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
             text-shadow: none !important;
         }
         
-        body.christmas-theme .book-btn::before {
+        .book-btn::before {
             content: '🎁 ';
         }
 
-        body.christmas-theme .book-btn:hover {
+        .book-btn:hover {
             background: var(--white);
             color: var(--christmas-red) !important;
             box-shadow: 0 6px 20px rgba(196, 30, 58, 0.4);
@@ -188,22 +147,17 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('images/front.jpeg') center/cover no-repeat;
+            background: linear-gradient(rgba(22, 91, 51, 0.3), rgba(196, 30, 58, 0.3)), url('images/front.jpeg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: var(--white);
             position: relative;
-        }
-
-        /* Christmas Hero */
-        body.christmas-theme .hero {
-            background: linear-gradient(rgba(22, 91, 51, 0.3), rgba(196, 30, 58, 0.3)), url('images/front.jpeg') center/cover no-repeat;
             overflow: hidden;
         }
         
-        body.christmas-theme .hero::before {
+        .hero::before {
             content: '❄️';
             position: absolute;
             top: -50px;
@@ -235,25 +189,19 @@
         }
 
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             letter-spacing: 3px;
             margin-bottom: 3rem;
             text-transform: uppercase;
-            font-weight: 300;
-        }
-
-        /* Christmas Hero Text */
-        body.christmas-theme .hero p {
-            font-size: 1.3rem;
             font-weight: 400;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.5), 0 0 20px rgba(255, 215, 0, 0.5);
         }
         
-        body.christmas-theme .hero p::before {
+        .hero p::before {
             content: '✨ ';
         }
         
-        body.christmas-theme .hero p::after {
+        .hero p::after {
             content: ' ✨';
         }
 
@@ -265,8 +213,8 @@
         }
 
         .btn-primary {
-            background: var(--white);
-            color: var(--primary);
+            background: var(--christmas-red);
+            color: var(--white);
             padding: 1.2rem 3rem;
             text-decoration: none;
             font-size: 0.75rem;
@@ -274,24 +222,12 @@
             text-transform: uppercase;
             font-weight: 600;
             transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-primary:hover {
-            background: var(--gold);
-            color: var(--white);
-        }
-
-        /* Christmas Primary Button */
-        body.christmas-theme .btn-primary {
-            background: var(--christmas-red);
-            color: var(--white);
             border: 2px solid var(--christmas-gold);
+            cursor: pointer;
             box-shadow: 0 4px 15px rgba(196, 30, 58, 0.4);
         }
 
-        body.christmas-theme .btn-primary:hover {
+        .btn-primary:hover {
             background: var(--christmas-gold);
             color: var(--christmas-green);
             border-color: var(--christmas-red);
@@ -308,22 +244,12 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             font-weight: 600;
-            border: 2px solid var(--white);
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            background: var(--white);
-            color: var(--primary);
-        }
-
-        /* Christmas Secondary Button */
-        body.christmas-theme .btn-secondary {
             border: 2px solid var(--christmas-gold);
+            transition: all 0.3s ease;
             box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
         }
 
-        body.christmas-theme .btn-secondary:hover {
+        .btn-secondary:hover {
             background: var(--christmas-green);
             color: var(--christmas-gold);
             border-color: var(--christmas-gold);
@@ -336,16 +262,11 @@
         }
 
         .section-light {
-            background: var(--cream);
-        }
-
-        /* Christmas Section Light */
-        body.christmas-theme .section-light {
             background: linear-gradient(135deg, #FFF5F5 0%, #FFE5E5 100%);
             position: relative;
         }
         
-        body.christmas-theme .section-light::before {
+        .section-light::before {
             content: '';
             position: absolute;
             top: 0;
@@ -369,20 +290,18 @@
             letter-spacing: 4px;
             margin-bottom: 1rem;
             text-transform: uppercase;
-        }
-
-        /* Christmas Section Titles */
-        body.christmas-theme .section-title h2 {
             color: var(--christmas-green);
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
         
-        body.christmas-theme .section-title h2::before {
+        .section-title h2::before {
             content: '🎄 ';
+            color: var(--christmas-green);
         }
         
-        body.christmas-theme .section-title h2::after {
+        .section-title h2::after {
             content: ' 🎄';
+            color: var(--christmas-green);
         }
 
         .section-title p {
@@ -462,11 +381,6 @@
         .service-card .icon {
             font-size: 3rem;
             margin-bottom: 1.5rem;
-            color: var(--gold);
-        }
-
-        /* Christmas Service Icons */
-        body.christmas-theme .service-card .icon {
             background: linear-gradient(135deg, var(--christmas-red), var(--christmas-gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -501,19 +415,14 @@
         .price-category h3 {
             font-size: 2rem;
             margin-bottom: 1.5rem;
-            color: var(--gold);
+            color: var(--christmas-red);
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 400;
-        }
-
-        /* Christmas Price Categories */
-        body.christmas-theme .price-category h3 {
-            color: var(--christmas-red);
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
         
-        body.christmas-theme .price-category h3::before {
+        .price-category h3::before {
             content: '⭐ ';
         }
 
@@ -550,15 +459,10 @@
 
         .price-item-price {
             font-size: 1.1rem;
-            color: var(--gold);
+            color: var(--christmas-green);
             font-weight: 600;
             white-space: nowrap;
             margin-left: 2rem;
-        }
-
-        /* Christmas Prices */
-        body.christmas-theme .price-item-price {
-            color: var(--christmas-green);
             background: linear-gradient(135deg, var(--christmas-green), var(--christmas-gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -569,18 +473,12 @@
             text-align: center;
             margin-top: 2rem;
             padding: 1.5rem;
-            background: var(--cream);
-            border-radius: 8px;
-            font-size: 0.9rem;
-            color: #666;
-            font-style: italic;
-        }
-
-        /* Christmas Price Note */
-        body.christmas-theme .price-note {
             background: linear-gradient(135deg, rgba(22, 91, 51, 0.1), rgba(196, 30, 58, 0.1));
             border: 2px dashed var(--christmas-gold);
+            border-radius: 8px;
+            font-size: 0.9rem;
             color: var(--christmas-green);
+            font-style: italic;
             font-weight: 500;
         }
 
@@ -679,24 +577,14 @@
             font-weight: 600;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: var(--gold);
-        }
-
-        /* Christmas Testimonial Author */
-        body.christmas-theme .testimonial-author {
             color: var(--christmas-red);
         }
 
         .star-rating {
             font-size: 1.5rem;
-            color: #ffd700;
+            color: var(--christmas-gold);
             margin-bottom: 1rem;
             letter-spacing: 3px;
-        }
-
-        /* Christmas Stars */
-        body.christmas-theme .star-rating {
-            color: var(--christmas-gold);
             filter: drop-shadow(0 2px 4px rgba(255, 215, 0, 0.4));
         }
 
@@ -810,30 +698,20 @@
 
         .submit-btn {
             width: 100%;
-            background: var(--primary);
+            background: linear-gradient(135deg, var(--christmas-green), var(--christmas-red));
             color: var(--white);
             padding: 1.2rem;
-            border: none;
+            border: 2px solid var(--christmas-gold);
             cursor: pointer;
             font-size: 0.85rem;
             letter-spacing: 2px;
             text-transform: uppercase;
             font-weight: 600;
             transition: all 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            background: var(--gold);
-        }
-
-        /* Christmas Submit Button */
-        body.christmas-theme .submit-btn {
-            background: linear-gradient(135deg, var(--christmas-green), var(--christmas-red));
-            border: 2px solid var(--christmas-gold);
             box-shadow: 0 4px 15px rgba(22, 91, 51, 0.3);
         }
 
-        body.christmas-theme .submit-btn:hover {
+        .submit-btn:hover {
             background: linear-gradient(135deg, var(--christmas-red), var(--christmas-gold));
             box-shadow: 0 6px 25px rgba(196, 30, 58, 0.4);
             transform: translateY(-2px);
@@ -862,14 +740,9 @@
 
         /* Footer */
         footer {
-            background: var(--primary);
+            background: linear-gradient(135deg, var(--christmas-green) 0%, #0d3d20 100%);
             color: var(--white);
             padding: 4rem 5% 2rem;
-        }
-
-        /* Christmas Footer */
-        body.christmas-theme footer {
-            background: linear-gradient(135deg, var(--christmas-green) 0%, #0d3d20 100%);
             border-top: 3px solid var(--christmas-gold);
             box-shadow: 0 -5px 20px rgba(255, 215, 0, 0.2);
         }
@@ -900,11 +773,6 @@
         }
 
         .footer-section a:hover {
-            color: var(--gold);
-        }
-
-        /* Christmas Footer Links */
-        body.christmas-theme .footer-section a:hover {
             color: var(--christmas-gold);
             text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
         }
@@ -936,11 +804,6 @@
         }
 
         .social-links a:hover {
-            background: var(--gold);
-        }
-
-        /* Christmas Social Links */
-        body.christmas-theme .social-links a:hover {
             background: var(--christmas-red);
             box-shadow: 0 0 15px rgba(196, 30, 58, 0.6);
             transform: scale(1.1);
@@ -1059,10 +922,10 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <p>Luxury Nail Care in Westbury</p>
+            <p>Festive Luxury Nail Care 🎅</p>
             <div class="hero-buttons">
-                <a href="https://coconailswestburyy1g8.setmore.com/" target="_blank" class="btn-primary">Book Your Appointment</a>
-                <a href="#services" class="btn-secondary">Our Services</a>
+                <a href="https://coconailswestburyy1g8.setmore.com/" target="_blank" class="btn-primary">🎁 Book Your Holiday Appointment</a>
+                <a href="#services" class="btn-secondary">✨ Christmas Services</a>
             </div>
         </div>
     </section>
@@ -1070,14 +933,14 @@
     <!-- About Section -->
     <section class="section section-light" id="about">
         <div class="section-title">
-            <h2>You're In Safe Hands</h2>
+            <h2>Holiday Magic & Care</h2>
         </div>
         <div class="about-content">
             <div class="about-text">
-                <h3>Experience Excellence</h3>
-                <p>At COCO, we've elevated the nail salon experience. Every detail has been carefully crafted to ensure your treatment is flawless from start to finish.</p>
-                <p>Our expert nail artists are trained in precision techniques, using only the highest quality, non-toxic products. We take pride in maintaining the strictest hygiene standards with hospital-grade sterilization.</p>
-                <p>From classic manicures to intricate nail art, we're dedicated to delivering exceptional results that exceed your expectations every time.</p>
+                <h3>✨ Festive Excellence ✨</h3>
+                <p>This Christmas season, COCO brings you the perfect blend of luxury nail care and holiday sparkle. Every detail has been carefully crafted to ensure your festive treatment is flawless from start to finish.</p>
+                <p>Our expert nail artists are ready to create stunning Christmas nail art, from elegant snowflakes to festive red and green designs. We use only the highest quality products with festive glitters and seasonal colors.</p>
+                <p>From classic holiday manicures to intricate Christmas nail art, we're dedicated to making your nails shine bright this festive season. Book your Christmas nails today! 🎄</p>
             </div>
             <div class="about-image">
                 <img src="images/fullset.jpg" alt="COCO Nail Bar Interior">
@@ -1085,117 +948,42 @@
         </div>
     </section>
 
-    <!-- Gift Vouchers Section -->
-    <section class="section">
-        <div class="section-title">
-            <h2>Gift Vouchers Available</h2>
-            <p>The perfect gift for someone special</p>
-        </div>
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: #555;">
-                Treat your loved ones to the luxury nail experience at COCO. Our gift vouchers are perfect for birthdays, holidays, or just to show you care. Available for any amount and redeemable against all our services.
-            </p>
-            <a href="https://coconailswestburyy1g8.setmore.com/" target="_blank" class="btn-primary">Purchase Gift Voucher</a>
-        </div>
-    </section>
-
-    <!-- Premium Products Section -->
-    <section class="section section-light">
-        <div class="section-title">
-            <h2>Premium Products We Use</h2>
-            <p>Only the finest quality products for your nails</p>
-        </div>
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-bottom: 2rem;">
-                <div style="background: white; padding: 2.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center;">
-                    <div style="width: 200px; height: 200px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, #f8f6f3, #e8e6e3); border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                        <img src="images/boldberry-product.jpg" alt="Bold Berry Gels" style="max-width: 100%; max-height: 100%; object-fit: contain;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div style="display: none; flex-direction: column; align-items: center; justify-content: center; padding: 1rem; color: #999;">
-                            <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor" style="margin-bottom: 0.5rem;">
-                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-                            </svg>
-                            <span style="font-size: 0.85rem;">Product Image</span>
-                        </div>
-                    </div>
-                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--gold); font-weight: 400;">Bold Berry Gels</h3>
-                    <p style="line-height: 1.8; color: #555; margin-bottom: 1rem; text-align: left;">
-                        We exclusively use Bold Berry gel polish systems, renowned for their exceptional quality and safety standards.
-                    </p>
-                    <ul style="text-align: left; color: #666; line-height: 2; margin-left: 1.5rem;">
-                        <li>Non-toxic formulation</li>
-                        <li>Eco-friendly and sustainable</li>
-                        <li>Free from harmful chemicals including TPO (Triphenyl Phosphate)</li>
-                        <li>Long-lasting, chip-resistant finish</li>
-                        <li>Vibrant, fade-resistant colors</li>
-                    </ul>
-                </div>
-                <div style="background: white; padding: 2.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center;">
-                    <div style="width: 200px; height: 200px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, #f8f6f3, #e8e6e3); border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                        <img src="images/gelbottle-biab.jpg" alt="The GelBottle BIAB" style="max-width: 100%; max-height: 100%; object-fit: contain;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div style="display: none; flex-direction: column; align-items: center; justify-content: center; padding: 1rem; color: #999;">
-                            <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor" style="margin-bottom: 0.5rem;">
-                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-                            </svg>
-                            <span style="font-size: 0.85rem;">Product Image</span>
-                        </div>
-                    </div>
-                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--gold); font-weight: 400;">The GelBottle BIAB™</h3>
-                    <p style="line-height: 1.8; color: #555; margin-bottom: 1rem; text-align: left;">
-                        For our Builder In A Bottle (BIAB) treatments, we trust The GelBottle Inc — the original inventors of BIAB™ and industry leaders in professional nail care.
-                    </p>
-                    <ul style="text-align: left; color: #666; line-height: 2; margin-left: 1.5rem;">
-                        <li>Vegan & cruelty-free certified</li>
-                        <li>Strengthens natural nails</li>
-                        <li>Flexible yet durable formula</li>
-                        <li>Professional-grade quality</li>
-                        <li>Trusted by nail technicians worldwide</li>
-                    </ul>
-                </div>
-            </div>
-            <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, rgba(212, 165, 116, 0.1), rgba(212, 165, 116, 0.05)); border-radius: 8px;">
-                <p style="font-size: 1.1rem; color: #555; line-height: 1.8;">
-                    <strong style="color: var(--gold);">Your health and safety matter.</strong> We're committed to using only premium, responsibly-sourced products that deliver stunning results without compromising on safety or environmental standards.
-                </p>
-            </div>
-        </div>
-    </section>
-
     <!-- Services Section -->
     <section class="section" id="services">
         <div class="section-title">
-            <h2>Our Services</h2>
-            <p>Premium nail care treatments designed for the modern age</p>
+            <h2>Christmas Services</h2>
+            <p>Festive nail care treatments perfect for the holiday season ❄️</p>
         </div>
         <div class="services-grid">
             <div class="service-card">
+                <div class="icon">🎄</div>
+                <h3>Christmas Manicures</h3>
+                <p>Festive manicures with holiday colors, glitter, and sparkle. Perfect for Christmas parties and celebrations.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">❄️</div>
+                <h3>Winter Pedicures</h3>
+                <p>Indulgent warm foot treatments perfect for cold weather. Includes seasonal aromatherapy and festive polish options.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🎅</div>
+                <h3>Holiday Gel Nails</h3>
+                <p>Long-lasting gel manicures in Christmas reds, greens, and golds. Stay perfect through all your holiday festivities.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">⭐</div>
+                <h3>Festive Extensions</h3>
+                <p>Beautiful Christmas-themed nail extensions. Add length and sparkle with snowflakes, stars, and holiday designs.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🎁</div>
+                <h3>Christmas Nail Art</h3>
+                <p>Custom festive designs: snowflakes, reindeer, candy canes, Santa hats, and more. Make your nails the talk of the party!</p>
+            </div>
+            <div class="service-card">
                 <div class="icon">✨</div>
-                <h3>Manicures</h3>
-                <p>Classic and luxury manicures with meticulous attention to detail. Perfect shaping, cuticle care, and flawless polish application.</p>
-            </div>
-            <div class="service-card">
-                <div class="icon">💅</div>
-                <h3>Pedicures</h3>
-                <p>Indulgent foot treatments combining relaxation and beauty. Includes exfoliation, massage, and premium polish.</p>
-            </div>
-            <div class="service-card">
-                <div class="icon">💎</div>
-                <h3>Gel Nails</h3>
-                <p>Long-lasting gel manicures that stay perfect for up to three weeks. Chip-resistant and glossy finish.</p>
-            </div>
-            <div class="service-card">
-                <div class="icon">🌟</div>
-                <h3>Acrylic Nails</h3>
-                <p>Beautiful nail extensions crafted to perfection. Strong, durable, and customizable to your desired length and shape.</p>
-            </div>
-            <div class="service-card">
-                <div class="icon">🎨</div>
-                <h3>Nail Art</h3>
-                <p>Custom designs from minimalist elegance to intricate artwork. Express your unique style with our creative nail artists.</p>
-            </div>
-            <div class="service-card">
-                <div class="icon">🧖</div>
-                <h3>Spa Treatments</h3>
-                <p>Luxurious add-ons including paraffin wax, hot stone massage, and aromatic treatments for ultimate relaxation.</p>
+                <h3>Holiday Spa Packages</h3>
+                <p>Luxurious seasonal spa treatments with peppermint aromatherapy, warm paraffin, and festive pampering.</p>
             </div>
         </div>
     </section>
@@ -1203,8 +991,8 @@
     <!-- Price List Section -->
     <section class="section section-light" id="prices">
         <div class="section-title">
-            <h2>Our Prices</h2>
-            <p>Transparent pricing for premium nail care services</p>
+            <h2>Christmas Prices</h2>
+            <p>Special festive pricing for the holiday season 🎁</p>
         </div>
         <div class="price-list">
             <div class="price-category">
@@ -1357,17 +1145,17 @@
     <!-- Image Banner -->
     <div class="image-banner" style="background-image: url('images/526536820_122124855146904185_3374837438132483255_n.jpg');">
         <div class="banner-content">
-            <h2>Look Good. Feel Better.</h2>
-            <p>The highest quality treatments in a luxurious environment</p>
-            <a href="https://coconailswestburyy1g8.setmore.com/" target="_blank" class="btn-primary">Book Now</a>
+            <h2>✨ Sparkle This Christmas ✨</h2>
+            <p>Festive nail treatments in a winter wonderland atmosphere</p>
+            <a href="https://coconailswestburyy1g8.setmore.com/" target="_blank" class="btn-primary">🎁 Book Your Holiday Appointment</a>
         </div>
     </div>
 
     <!-- Gallery Section -->
     <section class="section section-light" id="gallery">
         <div class="section-title">
-            <h2>Our Work</h2>
-            <p>Styled by us, worn by you</p>
+            <h2>Festive Gallery</h2>
+            <p>Christmas nail art and holiday designs 🎄❄️</p>
         </div>
         <div class="gallery-grid">
             <div class="gallery-item"><img src="images/514343925_122126158496904185_2268886236753183282_n.jpg" alt="Nail Design" loading="lazy"></div>
@@ -1399,12 +1187,12 @@
     <!-- Testimonials Section -->
     <section class="section">
         <div class="section-title">
-            <h2>What Our Clients Say</h2>
+            <h2>Holiday Reviews</h2>
         </div>
         <div class="testimonials">
             <div class="testimonial" id="testimonial">
                 <div class="star-rating" id="starRating">★★★★★</div>
-                <p>"COCO is hands down the best nail salon in Westbury. The attention to detail is unmatched, and my gel manicures last for weeks without chipping. I won't go anywhere else!"</p>
+                <p>"COCO created the most stunning Christmas nails for me! The festive designs were perfect for all my holiday parties. The glitter and snowflake details lasted through New Year's!"</p>
                 <div class="testimonial-author">Sarah M.</div>
             </div>
             <a href="https://www.google.com/search?q=coco+nail+bar+westbury+bristol&rlz=1C1GCEU_enGB&oq=coco+nail+bar+westbury+bristol#lrd=0x48718e4c0a7d9f9f:0x1234567890abcdef,1" target="_blank" class="google-link">
@@ -1422,11 +1210,11 @@
     <!-- Contact Section -->
     <section class="section section-light" id="contact">
         <div class="section-title">
-            <h2>Get In Touch</h2>
+            <h2>Book Your Festive Nails</h2>
         </div>
         <div class="contact-content">
             <div class="contact-info">
-                <h3>Visit Us</h3>
+                <h3>🎄 Visit Us This Christmas 🎄</h3>
                 <div class="info-item">
                     <h4>Address</h4>
                     <p>9 Canford Lane<br>Bristol BS9 3DB<br>United Kingdom</p>
@@ -1441,7 +1229,7 @@
                 </div>
                 <div class="info-item">
                     <h4>Opening Hours</h4>
-                    <p>Monday - Saturday: 9:00 AM - 6:00 PM<br>Sunday: Closed</p>
+                    <p>Monday - Saturday: 9:00 AM - 6:00 PM<br>Sunday: Closed<br><br>✨ <em>Extended hours available for Christmas bookings!</em> ✨</p>
                 </div>
                 <div class="social-links">
                     <a href="https://www.facebook.com/profile.php?id=61577125560267" target="_blank" aria-label="Facebook">
@@ -1487,7 +1275,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <div class="footer-logo">COCO</div>
-                <p>Experience luxury nail care in the heart of Westbury.</p>
+                <p>🎄 Experience festive luxury nail care in the heart of Westbury this Christmas season! ✨</p>
                 <div class="social-links">
                     <a href="https://www.facebook.com/profile.php?id=61577125560267" target="_blank" aria-label="Facebook">
                         <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -1517,26 +1305,11 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 COCO Nail Bar. All rights reserved.</p>
+            <p>🎄 Merry Christmas from COCO Nail Bar! &copy; 2024 All rights reserved. ❄️</p>
         </div>
     </footer>
 
     <script>
-        // Check if current month is December and apply Christmas theme
-        (function() {
-            const currentMonth = new Date().getMonth(); // 0-11, where 11 is December
-            if (currentMonth === 11) {
-                document.body.classList.add('christmas-theme');
-                // Update page title for Christmas
-                document.title = 'COCO - Christmas Nails & Festive Nail Art in Westbury 🎄';
-                // Update hero text for Christmas
-                const heroText = document.querySelector('.hero p');
-                if (heroText && !heroText.textContent.includes('Festive')) {
-                    heroText.textContent = 'Festive Luxury Nail Care 🎅';
-                }
-            }
-        })();
-
         // Initialize EmailJS
         (function() {
             emailjs.init("CIeSM1bZigYzYkUL0");
@@ -1574,17 +1347,17 @@
         // Rotating testimonials
         const testimonials = [
             {
-                text: "COCO is hands down the best nail salon in Westbury. The attention to detail is unmatched, and my gel manicures last for weeks without chipping. I won't go anywhere else!",
+                text: "COCO created the most stunning Christmas nails for me! The festive designs were perfect for all my holiday parties. The glitter and snowflake details lasted through New Year's!",
                 author: "Sarah M.",
                 rating: 5
             },
             {
-                text: "Absolutely love this salon! The staff are professional, the atmosphere is relaxing, and the results are always perfect. Highly recommend their nail art services!",
+                text: "Absolutely in love with my holiday nails! The candy cane stripes and tiny Santa hats were adorable. Everyone at my Christmas dinner complimented them!",
                 author: "Emily R.",
                 rating: 5
             },
             {
-                text: "Finally found a nail salon that takes hygiene seriously. Everything is sterilized properly and the products are top quality. My nails have never looked better!",
+                text: "Best Christmas gift I gave myself! The festive red and green gel manicure with gold sparkles made me feel so glamorous. Perfect for the season!",
                 author: "Jessica T.",
                 rating: 5
             }
@@ -1647,6 +1420,7 @@
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Send Message';
                 });
+        });
         });
     </script>
 </body>
