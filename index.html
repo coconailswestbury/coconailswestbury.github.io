@@ -1729,7 +1729,7 @@
         // Check if current month is December and apply Christmas theme
         (function() {
             const currentMonth = new Date().getMonth(); // 0-11, where 11 is December
-            if (currentMonth !== 11) {
+            if (currentMonth === 11) {
                 document.body.classList.add('christmas-theme');
                 // Update page title for Christmas
                 document.title = 'COCO - Christmas Nails & Festive Nail Art in Westbury 🎄';
@@ -1855,5 +1855,6 @@
     </script>
 </body>
 </html>
+
 
 
