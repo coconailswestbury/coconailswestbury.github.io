@@ -40,6 +40,20 @@
             --christmas-gold: #FFD700;
         }
 
+        /* Mother's Day Theme Variables (late winter through spring) */
+        body.mothers-day-theme {
+            --primary: #2f2530;
+            --gold: #b95f74;
+            --cream: #fcf3f5;
+            --text: #3f3038;
+            --light-gray: #f8edf0;
+            --mothers-rose: #b95f74;
+            --mothers-rose-dark: #8f4658;
+            --mothers-blush: #f2d7df;
+            --mothers-sage: #7e9488;
+            --mothers-accent: #d58ea0;
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
@@ -69,6 +83,14 @@
             background: linear-gradient(to right, rgba(22, 91, 51, 0.98), rgba(196, 30, 58, 0.98));
             box-shadow: 0 2px 10px rgba(0,0,0,0.2), 0 0 20px rgba(255, 215, 0, 0.3);
             border-bottom: 2px solid var(--christmas-gold);
+        }
+
+        /* Mother's Day Navigation */
+        body.mothers-day-theme .nav-wrapper {
+            background:
+                linear-gradient(90deg, rgba(255, 255, 255, 0.96), rgba(252, 243, 245, 0.96));
+            box-shadow: 0 6px 20px rgba(107, 68, 79, 0.12);
+            border-bottom: 1px solid rgba(185, 95, 116, 0.2);
         }
 
         nav {
@@ -104,6 +126,12 @@
             content: ' ❄️';
         }
 
+        /* Mother's Day Logo */
+        body.mothers-day-theme .logo {
+            color: var(--mothers-rose-dark);
+            letter-spacing: 7px;
+        }
+
         .nav-links {
             display: flex;
             gap: 2.5rem;
@@ -134,6 +162,15 @@
         body.christmas-theme .nav-links a:hover {
             color: var(--christmas-gold);
             text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+        }
+
+        /* Mother's Day Nav Links */
+        body.mothers-day-theme .nav-links a {
+            color: var(--mothers-rose-dark);
+        }
+
+        body.mothers-day-theme .nav-links a:hover {
+            color: var(--mothers-rose);
         }
 
         .book-btn {
@@ -171,6 +208,21 @@
             transform: translateY(-2px);
         }
 
+        /* Mother's Day Book Button */
+        body.mothers-day-theme .book-btn {
+            background: linear-gradient(135deg, var(--mothers-rose), var(--mothers-rose-dark));
+            border-radius: 999px;
+            box-shadow: 0 6px 16px rgba(143, 70, 88, 0.25);
+            padding: 0.85rem 2.2rem;
+            letter-spacing: 1px;
+        }
+
+        body.mothers-day-theme .book-btn:hover {
+            background: linear-gradient(135deg, var(--mothers-accent), var(--mothers-rose));
+            color: var(--white) !important;
+            transform: translateY(-2px);
+        }
+
         .mobile-menu {
             display: none;
             flex-direction: column;
@@ -183,6 +235,10 @@
             height: 2px;
             background: var(--primary);
             transition: all 0.3s ease;
+        }
+
+        body.mothers-day-theme .mobile-menu span {
+            background: var(--mothers-rose-dark);
         }
 
         /* Hero Section */
@@ -202,6 +258,14 @@
             background: linear-gradient(rgba(22, 91, 51, 0.3), rgba(196, 30, 58, 0.3)), url('images/front.jpeg') center/cover no-repeat;
             overflow: hidden;
         }
+
+        /* Mother's Day Hero */
+        body.mothers-day-theme .hero {
+            background:
+                linear-gradient(rgba(47, 37, 48, 0.45), rgba(143, 70, 88, 0.35)),
+                url('images/front.jpeg') center/cover no-repeat;
+            overflow: hidden;
+        }
         
         body.christmas-theme .hero::before {
             content: '❄️';
@@ -215,15 +279,53 @@
             pointer-events: none;
             opacity: 0.6;
         }
+
+        body.mothers-day-theme .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(242, 215, 223, 0.5) 0%, transparent 40%),
+                radial-gradient(circle at 85% 78%, rgba(213, 142, 160, 0.35) 0%, transparent 46%),
+                radial-gradient(circle at 60% 12%, rgba(126, 148, 136, 0.22) 0%, transparent 50%);
+            animation: bloomFloat 16s ease-in-out infinite alternate;
+            pointer-events: none;
+        }
         
         @keyframes snowfall {
             0% { transform: translateY(0) rotate(0deg); }
             100% { transform: translateY(100vh) rotate(360deg); }
         }
 
+        @keyframes bloomFloat {
+            0% { transform: scale(1) translateY(0); }
+            100% { transform: scale(1.05) translateY(-8px); }
+        }
+
         .hero-content {
             max-width: 800px;
             padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .seasonal-badge {
+            display: none;
+            padding: 0.5rem 1.25rem;
+            margin-bottom: 1.5rem;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        body.mothers-day-theme .seasonal-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--mothers-rose-dark);
+            border: 1px solid rgba(242, 215, 223, 0.8);
+            box-shadow: 0 8px 20px rgba(47, 37, 48, 0.2);
         }
 
         .hero h1 {
@@ -255,6 +357,14 @@
         
         body.christmas-theme .hero p::after {
             content: ' ✨';
+        }
+
+        body.mothers-day-theme .hero p {
+            font-size: 1.18rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: none;
+            text-shadow: 0 6px 18px rgba(0,0,0,0.4);
         }
 
         .hero-buttons {
@@ -299,6 +409,19 @@
             transform: translateY(-3px);
         }
 
+        body.mothers-day-theme .btn-primary {
+            background: linear-gradient(135deg, var(--mothers-accent), var(--mothers-rose));
+            color: var(--white);
+            border-radius: 999px;
+            box-shadow: 0 8px 22px rgba(143, 70, 88, 0.3);
+        }
+
+        body.mothers-day-theme .btn-primary:hover {
+            background: linear-gradient(135deg, var(--mothers-rose), var(--mothers-rose-dark));
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
         .btn-secondary {
             background: transparent;
             color: var(--white);
@@ -330,6 +453,17 @@
             box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
         }
 
+        body.mothers-day-theme .btn-secondary {
+            border-color: rgba(255, 255, 255, 0.85);
+            border-radius: 999px;
+            backdrop-filter: blur(2px);
+        }
+
+        body.mothers-day-theme .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.92);
+            color: var(--mothers-rose-dark);
+        }
+
         /* Section Styles */
         .section {
             padding: 8rem 5%;
@@ -358,6 +492,21 @@
             pointer-events: none;
         }
 
+        body.mothers-day-theme .section-light {
+            background: linear-gradient(165deg, #fffafb 0%, #fcf3f5 60%, #f8edf0 100%);
+            position: relative;
+        }
+
+        body.mothers-day-theme .section-light::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 18% 24%, rgba(213, 142, 160, 0.12) 0%, transparent 46%),
+                radial-gradient(circle at 82% 78%, rgba(126, 148, 136, 0.1) 0%, transparent 42%);
+            pointer-events: none;
+        }
+
         .section-title {
             text-align: center;
             margin-bottom: 4rem;
@@ -383,6 +532,17 @@
         
         body.christmas-theme .section-title h2::after {
             content: ' 🎄';
+        }
+
+        body.mothers-day-theme .section-title h2 {
+            color: var(--mothers-rose-dark);
+            letter-spacing: 3px;
+            text-transform: none;
+        }
+
+        body.mothers-day-theme .section-title h2::before,
+        body.mothers-day-theme .section-title h2::after {
+            content: none;
         }
 
         .section-title p {
@@ -474,6 +634,19 @@
             filter: drop-shadow(0 2px 4px rgba(196, 30, 58, 0.3));
         }
 
+        body.mothers-day-theme .service-card {
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid rgba(185, 95, 116, 0.15);
+            border-radius: 12px;
+        }
+
+        body.mothers-day-theme .service-card .icon {
+            background: linear-gradient(135deg, var(--mothers-rose), var(--mothers-sage));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
         .service-card h3 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
@@ -515,6 +688,16 @@
         
         body.christmas-theme .price-category h3::before {
             content: '⭐ ';
+        }
+
+        body.mothers-day-theme .price-category h3 {
+            color: var(--mothers-rose);
+            text-transform: none;
+            letter-spacing: 1.2px;
+        }
+
+        body.mothers-day-theme .price-category h3::before {
+            content: none;
         }
 
         .price-items {
@@ -565,6 +748,16 @@
             background-clip: text;
         }
 
+        body.mothers-day-theme .price-items {
+            border: 1px solid rgba(185, 95, 116, 0.15);
+            box-shadow: 0 10px 30px rgba(47, 37, 48, 0.08);
+        }
+
+        body.mothers-day-theme .price-item-price {
+            color: var(--mothers-rose-dark);
+            font-weight: 700;
+        }
+
         .price-note {
             text-align: center;
             margin-top: 2rem;
@@ -582,6 +775,13 @@
             border: 2px dashed var(--christmas-gold);
             color: var(--christmas-green);
             font-weight: 500;
+        }
+
+        body.mothers-day-theme .price-note {
+            background: linear-gradient(135deg, rgba(242, 215, 223, 0.45), rgba(248, 237, 240, 0.8));
+            border: 1px solid rgba(185, 95, 116, 0.25);
+            color: var(--mothers-rose-dark);
+            font-style: normal;
         }
 
         /* Full Width Image Banner */
@@ -608,6 +808,10 @@
             background: rgba(0,0,0,0.3);
         }
 
+        body.mothers-day-theme .image-banner::before {
+            background: linear-gradient(120deg, rgba(47, 37, 48, 0.42), rgba(185, 95, 116, 0.38));
+        }
+
         .banner-content {
             position: relative;
             z-index: 1;
@@ -626,6 +830,14 @@
             font-size: 1.1rem;
             letter-spacing: 2px;
             margin-bottom: 2rem;
+        }
+
+        body.mothers-day-theme .banner-content h2 {
+            letter-spacing: 3px;
+        }
+
+        body.mothers-day-theme .banner-content p {
+            letter-spacing: 1px;
         }
 
         /* Gallery Section */
@@ -687,6 +899,10 @@
             color: var(--christmas-red);
         }
 
+        body.mothers-day-theme .testimonial-author {
+            color: var(--mothers-rose);
+        }
+
         .star-rating {
             font-size: 1.5rem;
             color: #ffd700;
@@ -698,6 +914,10 @@
         body.christmas-theme .star-rating {
             color: var(--christmas-gold);
             filter: drop-shadow(0 2px 4px rgba(255, 215, 0, 0.4));
+        }
+
+        body.mothers-day-theme .star-rating {
+            color: var(--mothers-accent);
         }
 
         .google-link {
@@ -773,6 +993,12 @@
             padding: 3rem;
         }
 
+        body.mothers-day-theme .contact-form {
+            background: linear-gradient(160deg, rgba(255, 255, 255, 0.9), rgba(248, 237, 240, 0.95));
+            border: 1px solid rgba(185, 95, 116, 0.15);
+            border-radius: 10px;
+        }
+
         .form-group {
             margin-bottom: 1.5rem;
         }
@@ -801,6 +1027,12 @@
         .form-group textarea:focus {
             outline: none;
             border-color: var(--gold);
+        }
+
+        body.mothers-day-theme .form-group input:focus,
+        body.mothers-day-theme .form-group textarea:focus {
+            border-color: var(--mothers-rose);
+            box-shadow: 0 0 0 3px rgba(185, 95, 116, 0.14);
         }
 
         .form-group textarea {
@@ -839,6 +1071,17 @@
             transform: translateY(-2px);
         }
 
+        body.mothers-day-theme .submit-btn {
+            background: linear-gradient(135deg, var(--mothers-rose-dark), var(--mothers-rose));
+            border-radius: 999px;
+            box-shadow: 0 8px 20px rgba(143, 70, 88, 0.25);
+        }
+
+        body.mothers-day-theme .submit-btn:hover {
+            background: linear-gradient(135deg, var(--mothers-rose), var(--mothers-accent));
+            transform: translateY(-2px);
+        }
+
         .submit-btn:disabled {
             background: #ccc;
             cursor: not-allowed;
@@ -872,6 +1115,11 @@
             background: linear-gradient(135deg, var(--christmas-green) 0%, #0d3d20 100%);
             border-top: 3px solid var(--christmas-gold);
             box-shadow: 0 -5px 20px rgba(255, 215, 0, 0.2);
+        }
+
+        body.mothers-day-theme footer {
+            background: linear-gradient(135deg, #2f2530 0%, #5e3a48 100%);
+            border-top: 2px solid rgba(213, 142, 160, 0.7);
         }
 
         .footer-content {
@@ -909,6 +1157,10 @@
             text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
         }
 
+        body.mothers-day-theme .footer-section a:hover {
+            color: var(--mothers-blush);
+        }
+
         .footer-logo {
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.5rem;
@@ -944,6 +1196,12 @@
             background: var(--christmas-red);
             box-shadow: 0 0 15px rgba(196, 30, 58, 0.6);
             transform: scale(1.1);
+        }
+
+        body.mothers-day-theme .social-links a:hover {
+            background: var(--mothers-rose);
+            box-shadow: 0 0 14px rgba(185, 95, 116, 0.5);
+            transform: scale(1.08);
         }
 
         .footer-bottom {
@@ -1035,6 +1293,11 @@
                 gap: 1.5rem;
             }
 
+            body.mothers-day-theme .nav-links {
+                background: rgba(255, 255, 255, 0.98);
+                border-bottom: 1px solid rgba(185, 95, 116, 0.2);
+            }
+
             .nav-links.active {
                 left: 0;
             }
@@ -1079,6 +1342,11 @@
             .hero h1 {
                 font-size: 3rem;
                 letter-spacing: 5px;
+            }
+
+            .seasonal-badge {
+                font-size: 0.65rem;
+                letter-spacing: 1.4px;
             }
 
             .logo {
@@ -1149,7 +1417,8 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <p>Luxury Nail Care in Westbury</p>
+            <div class="seasonal-badge" id="seasonalBadge">Mother's Day Feature</div>
+            <p id="heroTagline">Luxury Nail Care in Westbury</p>
             <div class="hero-buttons">
                 <a href="https://coconailswestburyy1g8.setmore.com/" target="_blank" class="btn-primary">Book Your Appointment</a>
                 <a href="#services" class="btn-secondary">Our Services</a>
@@ -1175,18 +1444,17 @@
         </div>
     </section>
 
-    <!-- Christmas Opening Times Section -->
     <!-- Gift Vouchers Section -->
-    <section class="section">
+    <section class="section" id="gift-vouchers">
         <div class="section-title">
-            <h2>Gift Vouchers Available</h2>
-            <p>The perfect gift for someone special</p>
+            <h2 id="giftVoucherTitle">Gift Vouchers Available</h2>
+            <p id="giftVoucherSubtitle">The perfect gift for someone special</p>
         </div>
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: #555;">
+            <p id="giftVoucherBody" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: #555;">
                 Treat your loved ones to the luxury nail experience at COCO. Our gift vouchers are perfect for birthdays, holidays, or just to show you care. Available for any amount and redeemable against all our services.
             </p>
-            <p style="font-size: 1.2rem; font-weight: 600; color: var(--gold); letter-spacing: 1px;">
+            <p id="giftVoucherCta" style="font-size: 1.2rem; font-weight: 600; color: var(--gold); letter-spacing: 1px;">
                 Visit the shop to purchase your gift voucher
             </p>
         </div>
@@ -1457,8 +1725,8 @@
     <!-- Image Banner -->
     <div class="image-banner" style="background-image: url('images/526536820_122124855146904185_3374837438132483255_n.jpg');">
         <div class="banner-content">
-            <h2>Look Good. Feel Better.</h2>
-            <p>The highest quality treatments in a luxurious environment</p>
+            <h2 id="bannerHeading">Look Good. Feel Better.</h2>
+            <p id="bannerSubheading">The highest quality treatments in a luxurious environment</p>
             <a href="https://coconailswestburyy1g8.setmore.com/" target="_blank" class="btn-primary">Book Now</a>
         </div>
     </div>
@@ -1622,18 +1890,93 @@
     </footer>
 
     <script>
-        // Check if current month is December and apply Christmas theme
+        // Seasonal theme manager
         (function() {
-            const currentMonth = new Date().getMonth(); // 0-11, where 11 is December
-            if (currentMonth === 11) {
-                document.body.classList.add('christmas-theme');
-                // Update page title for Christmas
-                document.title = 'COCO - Christmas Nails & Festive Nail Art in Westbury 🎄';
-                // Update hero text for Christmas
-                const heroText = document.querySelector('.hero p');
-                if (heroText && !heroText.textContent.includes('Festive')) {
-                    heroText.textContent = 'Festive Luxury Nail Care 🎅';
+            const now = new Date();
+            const currentMonth = now.getMonth(); // 0-11, where 11 is December
+            const forcedTheme = (new URLSearchParams(window.location.search).get('theme') || '').toLowerCase();
+            const descriptionTag = document.querySelector('meta[name="description"]');
+            const heroTagline = document.getElementById('heroTagline');
+            const seasonalBadge = document.getElementById('seasonalBadge');
+            const giftVoucherTitle = document.getElementById('giftVoucherTitle');
+            const giftVoucherSubtitle = document.getElementById('giftVoucherSubtitle');
+            const giftVoucherBody = document.getElementById('giftVoucherBody');
+            const giftVoucherCta = document.getElementById('giftVoucherCta');
+            const bannerHeading = document.getElementById('bannerHeading');
+            const bannerSubheading = document.getElementById('bannerSubheading');
+
+            function setPageDescription(value) {
+                if (descriptionTag) {
+                    descriptionTag.setAttribute('content', value);
                 }
+            }
+
+            function isMothersDaySeason(date) {
+                const campaignStart = new Date(2026, 1, 20, 0, 0, 0, 0); // February 20, 2026
+                const campaignEnd = new Date(2026, 2, 16, 23, 59, 59, 999); // March 16, 2026
+                return date >= campaignStart && date <= campaignEnd;
+            }
+
+            function applyChristmasTheme() {
+                document.body.classList.remove('mothers-day-theme');
+                document.body.classList.add('christmas-theme');
+                document.title = 'COCO - Christmas Nails & Festive Nail Art in Westbury';
+                setPageDescription('Experience festive luxury nail care at COCO in Westbury. Christmas nail art, holiday manicures, and sparkling designs for the season.');
+
+                if (heroTagline) {
+                    heroTagline.textContent = 'Festive Luxury Nail Care';
+                }
+            }
+
+            function applyMothersDayTheme() {
+                document.body.classList.remove('christmas-theme');
+                document.body.classList.add('mothers-day-theme');
+                document.title = 'COCO - Mother\'s Day Nail Appointments & Gift Vouchers in Westbury';
+                setPageDescription('Celebrate Mother\'s Day at COCO in Westbury with elegant nail treatments and beautifully presented gift vouchers.');
+
+                if (seasonalBadge) {
+                    seasonalBadge.textContent = 'Mother\'s Day Collection';
+                }
+                if (heroTagline) {
+                    heroTagline.textContent = 'Mother\'s Day appointments and gift vouchers now available';
+                }
+                if (giftVoucherTitle) {
+                    giftVoucherTitle.textContent = 'Mother\'s Day Gift Vouchers';
+                }
+                if (giftVoucherSubtitle) {
+                    giftVoucherSubtitle.textContent = 'A thoughtful gift, beautifully presented';
+                }
+                if (giftVoucherBody) {
+                    giftVoucherBody.textContent = 'Treat Mum to a premium manicure or pedicure experience at COCO. Our gift vouchers are available for any value and can be used across all services.';
+                }
+                if (giftVoucherCta) {
+                    giftVoucherCta.textContent = 'Speak to us in salon to prepare your Mother\'s Day voucher';
+                }
+                if (bannerHeading) {
+                    bannerHeading.textContent = 'Celebrate Her In Style';
+                }
+                if (bannerSubheading) {
+                    bannerSubheading.textContent = 'Refined treatments, calm atmosphere, and results she will love';
+                }
+            }
+
+            if (forcedTheme === 'christmas') {
+                applyChristmasTheme();
+                return;
+            }
+
+            if (forcedTheme === 'mothers-day' || forcedTheme === 'mothersday') {
+                applyMothersDayTheme();
+                return;
+            }
+
+            if (currentMonth === 11) {
+                applyChristmasTheme();
+                return;
+            }
+
+            if (isMothersDaySeason(now)) {
+                applyMothersDayTheme();
             }
         })();
 
